@@ -1,0 +1,47 @@
+<ion-view title="CONTACTS">
+  <ion-content>
+    <div class="list app-list-search">
+      <label class="item item-input app-item-search">
+        <i class="icon ion-search placeholder-icon"></i>
+        <input type="text" placeholder="Search" class="text-center">
+      </label>
+    </div>
+
+    <ion-list class="list contacts-list" can-swipe="true">
+      <ion-item ng-repeat="people in contactslist" class="item item-avatar item-profile-left item-icon-right">
+        <img src="{{ people.profile }}">
+        <div class="contact-item-content">
+          <h2>{{ people.name }}</h2>
+          <p>{{ people.desc }}</p>
+          <span class="user-online" ng-show="people.online">&bull; Online</span>
+          <span class="user-offline" ng-hide="people.online">&bull; Offline</span>
+        </div>
+        <i class="icon ion-ios-arrow-right"></i>
+        <div>
+          <ion-option-button class="flow-left app-item-option-btn ion-person app-outline-color app-item-option-btn-first"></ion-option-button>
+          <ion-option-button class="flow-left app-item-option-btn ion-checkmark"></ion-option-button>
+          <ion-option-button class="app-item-option-btn ion-close app-item-option-btn-last"></ion-option-button>
+        </div>
+      </ion-item>
+    </ion-list>
+    <!--div class="list contacts-list" can-swipe="true">
+      <div ng-repeat="people in contactslist">
+        <ion-item class="item item-icon-left item-icon-right app-item-mid app-item-option-back">
+          <div class="app-item-option-btn-bar">
+            <div class="flow-left app-item-option-btn ion-person app-outline-color"></div>
+            <div class="flow-left app-item-option-btn ion-checkmark"></div>
+            <div class="flow-left app-item-option-btn ion-close"></div>
+          </div>
+        </ion-item>
+        <a class="item item-profile-left app-item item-icon-right item-remove-animate" can-swipe="true" href="#" ng-class="{'app-item-swiped': people.popup}" on-swipe-right="onItemSwipeRight(people.id)" on-swipe-left="onItemSwipeLeft(people.id)">
+          <img src="{{ people.profile }}">
+          <h2>{{ people.name }}</h2>
+          <p>{{ people.desc }}</p>
+          <span class="user-online" ng-show="people.online">&bull; Online</span>
+          <span class="user-offline" ng-hide="people.online">&bull; Offline</span>
+          <i class="icon ion-ios-arrow-right"></i>
+        </a>
+      </div>
+    </div-->
+  </ion-content>
+</ion-view>

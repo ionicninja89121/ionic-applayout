@@ -1,0 +1,38 @@
+<ion-view title="SIGN UP">
+  <ion-content>
+    <div class="text-center">
+      <div class="login-profile">
+        <img src="img/profile-00.jpg" class="full-image">
+        <div class="add-profile">
+          <button class="button button-icon icon ion-ios-plus app-text-color">
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="list app-list">
+      <div class="item item-icon-left app-item">
+        <i class="icon ion-ios-person-outline"></i>
+        <input type="text" placeholder="User Name" ng-model="data.username">
+      </div>
+      <div class="item item-icon-left app-item">
+        <i class="icon ion-ios-email-outline"></i>
+        <input type="text" placeholder="Email Address" ng-model="data.email">
+      </div>
+      <div class="item item-icon-left item-icon-right app-item">
+        <i class="icon ion-ios-locked-outline"></i>
+        <input type="password" placeholder="Password" ng-model="data.password">
+        <i class="icon ion-ios-checkmark-outline"></i>
+      </div>
+      <div class="item item-icon-left item-icon-right app-item">
+        <i class="icon ion-ios-locked-outline"></i>
+        <input type="password" placeholder="Confirm Password" ng-model="data.confirmPwd">
+        <i class="icon ion-ios-checkmark-outline"></i>
+      </div>
+      <button class="item app-item button button-block app-btn" ng-click="doSignUp()">SIGN UP</button>
+    </div>
+
+    <div class="text-center signup-terms">
+      <p>By signing up, I agree to the <strong>Terms of Use</strong></p>
+    </div>
+  </ion-content>
+</ion-view>

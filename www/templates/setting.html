@@ -1,0 +1,86 @@
+<ion-view title="SETTINGS">
+  <ion-content>
+    <div class="setting-contain">
+      <div class="setting-title">PROFILE</div>
+      <div>
+        <div class="profile-contain">
+          <div class="flow-left profile-list">
+            <div class="list">
+              <div class="item item-icon-left profile-item">
+                <i class="icon ion-ios-person-outline"></i>
+                <input type="text" placeholder="User Name" ng-model="data.username">
+              </div>
+              <div class="item item-icon-left profile-item">
+                <i class="icon ion-ios-email-outline"></i>
+                <input type="text" placeholder="Email Address" ng-model="data.email">
+              </div>
+              <div class="item item-icon-left profile-item">
+                <i class="icon ion-ios-locked-outline"></i>
+                <input type="password" placeholder="Password" ng-model="data.password">
+              </div>
+            </div>
+          </div>
+          <div class="flow-left">
+            <div class="profile-img text-center">
+              <img src="img/profile-00.jpg" class="full-image">
+              <a href="#">Edit</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="setting-title">SOUNDS</div>
+      <div class="list">
+        <ion-item class="item item-icon-left app-item-mid-sound">
+          <i class="icon ion-ios-bolt-outline"></i>
+          <div class="flow-left">Notifications</div>
+          <div class="sound-on-btn" ng-show="soundTurnOn[0]" ng-click="onClickSoundBtn(0)">
+            ON
+            <div class="flow-right app-circle"></div>
+          </div>
+          <div class="sound-off-btn" ng-hide="soundTurnOn[0]" ng-click="onClickSoundBtn(0)">
+            <div class="flow-left app-circle"></div>
+            OFF
+          </div>
+        </ion-item>
+        <ion-item class="item item-icon-left app-item-mid-sound">
+          <i class="icon ion-ios-bell-outline"></i>
+          <div class="flow-left">Alerts</div>
+          <div class="sound-on-btn" ng-show="soundTurnOn[1]" ng-click="onClickSoundBtn(1)">
+            ON
+            <div class="flow-right app-circle"></div>
+          </div>
+          <div class="sound-off-btn" ng-hide="soundTurnOn[1]" ng-click="onClickSoundBtn(1)">
+            <div class="flow-left app-circle"></div>
+            OFF
+          </div>
+        </ion-item>
+      </div>
+
+      <div class="setting-title">SOCIAL</div>
+      <ion-list class="list app-list-mid app-list-social-setting" can-swipe="true">
+        <ion-item class="item item-icon-left item-icon-right app-item-mid-social">
+          <i class="icon ion-social-facebook"></i>
+          <div>Facebook</div>
+          <i class="icon ion-ios-arrow-right"></i>
+          <ion-option-button class="flow-left app-item-mid-option-btn ion-checkmark app-outline-color app-item-option-btn-first"></ion-option-button>
+          <ion-option-button class="app-item-mid-option-btn ion-close app-item-option-btn-last"></ion-option-button>
+        </ion-item>
+        <ion-item class="item item-icon-left item-icon-right app-item-mid-social">
+          <i class="icon ion-social-twitter"></i>
+          <div>Twitter</div>
+          <i class="icon ion-ios-arrow-right"></i>
+          <ion-option-button class="flow-left app-item-mid-option-btn ion-checkmark app-outline-color app-item-option-btn-first"></ion-option-button>
+          <ion-option-button class="app-item-mid-option-btn ion-close app-item-option-btn-last"></ion-option-button>
+        </ion-item>
+        <ion-item class="item item-icon-left item-icon-right app-item-mid-social">
+          <i class="icon ion-social-googleplus"></i>
+          <div>Google Plus</div>
+          <i class="icon ion-ios-arrow-right"></i>
+          <ion-option-button class="flow-left app-item-mid-option-btn ion-checkmark app-outline-color app-item-option-btn-first"></ion-option-button>
+          <ion-option-button class="app-item-mid-option-btn ion-close app-item-option-btn-last"></ion-option-button>
+        </ion-item>
+      </ion-list>
+    </div>
+  </ion-content>
+</ion-view>

@@ -1,0 +1,59 @@
+<ion-view title="CALENDAR">
+  <ion-content>
+    <div class="calendar">
+      <div class="calendar-header">
+        <ion-item class="item item-icon-left item-icon-right text-center">
+          <i class="icon ion-ios-arrow-left" ng-click="previous()"></i>
+          <span class="text-center">{{month.format("MMMM  YYYY").toUpperCase()}}</span>
+          <i class="icon ion-ios-arrow-right" ng-click="next()"></i>
+        </ion-item>
+      </div>
+      <div class="calendar-week-title row">
+        <span class="calendar-day text-center" ng-repeat="title in weekTitle">{{ title }}</span>
+      </div>
+      <div class="calendar-week row" ng-repeat="week in weeks">
+        <span class="calendar-day text-center" ng-class="{ 'different-month': !day.isCurrentMonth }" ng-click="select(day)" ng-repeat="day in week.days">
+          <span ng-class="{'calendar-today': day.isToday}">{{day.number}}</span>
+        </span>
+      </div>
+
+      <div class="calendar-today-text text-center">TODAY - {{ today.format("MMMM  DD").toUpperCase() }}</div>
+    </div>
+
+    <ion-list class="list app-list-mid app-list-social-setting" can-swipe="true">
+      <ion-item class="item item-icon-left item-icon-right app-item-mid">
+        <i class="icon ion-ios-alarm-outline"></i>
+        <div class="calendar-schedule">
+          <span>8:00 AM</span>
+          <div class="event-title">Daily Alarm - Wake UP</div>
+        </div>
+        <i class="icon ion-ios-arrow-right"></i>
+        <ion-option-button class="flow-left app-item-mid-option-btn ion-ios-bell-outline app-outline-color app-item-option-btn-first"></ion-option-button>
+        <ion-option-button class="flow-left app-item-mid-option-btn ion-checkmark"></ion-option-button>
+        <ion-option-button class="app-item-mid-option-btn ion-close app-item-option-btn-last"></ion-option-button>
+      </ion-item>
+      <ion-item class="item item-icon-left item-icon-right app-item-mid">
+        <i class="icon ion-ios-basketball-outline"></i>
+        <div class="calendar-schedule">
+          <span>4:00 PM - 5:00 PM</span>
+          <div class="event-title">Basketball Game</div>
+        </div>
+        <i class="icon ion-ios-arrow-right"></i>
+        <ion-option-button class="flow-left app-item-mid-option-btn ion-ios-bell-outline app-outline-color app-item-option-btn-first"></ion-option-button>
+        <ion-option-button class="flow-left app-item-mid-option-btn ion-checkmark"></ion-option-button>
+        <ion-option-button class="app-item-mid-option-btn ion-close app-item-option-btn-last"></ion-option-button>
+      </ion-item>
+      <ion-item class="item item-icon-left item-icon-right app-item-mid">
+        <i class="icon ion-ios-wineglass-outline"></i>
+        <div class="calendar-schedule">
+          <span>7:00 PM</span>
+          <div class="event-title">Drinking Wine</div>
+        </div>
+        <i class="icon ion-ios-arrow-right"></i>
+        <ion-option-button class="flow-left app-item-mid-option-btn ion-ios-bell-outline app-outline-color app-item-option-btn-first"></ion-option-button>
+        <ion-option-button class="flow-left app-item-mid-option-btn ion-checkmark"></ion-option-button>
+        <ion-option-button class="app-item-mid-option-btn ion-close app-item-option-btn-last"></ion-option-button>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>

@@ -1,0 +1,30 @@
+<ion-view title="LOG IN">
+  <ion-content>
+    <div class="text-center">
+      <div class="login-logo">
+        <img src="img/logo.png" class="full-image">
+      </div>
+    </div>
+    <div class="list app-list">
+      <div class="item item-icon-left app-item">
+        <i class="icon ion-ios-person-outline"></i>
+        <input type="text" placeholder="User Name" ng-model="data.username">
+      </div>
+      <div class="item item-icon-left item-icon-right app-item">
+        <i class="icon ion-ios-locked-outline"></i>
+        <input type="password" placeholder="Password" ng-model="data.password">
+        <!--i class="icon ion-ios-checkmark-outline"></i-->
+      </div>
+      <button class="item app-item button button-block app-btn" ng-click="doLogIn()">LOG IN</button>
+    </div>
+
+    <div class="text-center">
+      <div class="social-login">
+        <p>OR</p>
+        <button class="button app-social-btn button-dark button-icon icon ion-social-facebook"></button>
+        <button class="button app-social-btn button-dark button-icon icon ion-social-googleplus-outline"></button>
+        <button class="button app-social-btn button-dark button-icon icon ion-social-twitter"></button>
+      </div>
+    </div>
+  </ion-content>
+</ion-view>

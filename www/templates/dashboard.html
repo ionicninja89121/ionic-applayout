@@ -1,0 +1,67 @@
+<ion-view title="DASHBOARD">
+  <ion-content>
+    <div class="list app-list-search">
+      <label class="item item-input app-item-search">
+        <i class="icon ion-search placeholder-icon"></i>
+        <input type="text" placeholder="Search" class="text-center">
+      </label>
+    </div>
+
+    <div class="grid-list-container">
+      <ul>
+        <li class="flow-right text-center" ng-repeat="oneItem in itemList">
+          <a class="app-grid-item text-center" ng-class="{'dashboard-item-new': oneItem.addnew}" href="{{oneItem.action}}">
+            <div class="dashboard-item" ng-class="{'dashboard-item-new': oneItem.addnew}">
+              <img src="{{ oneItem.icon }}" class="full-image">
+            </div>
+            <p>{{ oneItem.title }}</p>
+            <span class="badge app-badge" ng-show="oneItem.badge">{{ oneItem.badge }}</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="row">
+      <div class="col-25">
+
+      </div>
+    </div>
+
+    <!--div class="dashboard-grid">
+      <div class="row">
+        <div class="col text-center">
+          <button class="button dashboard-item button-icon icon ion-ios-settings" ng-click="goSetting()"></button>
+          <p>Settings</p>
+        </div>
+        <div class="col text-center">
+          <button class="button dashboard-item button-icon icon ion-ios-email-outline"></button>
+          <p>Messages</p>
+        </div>
+        <div class="col text-center">
+          <button class="button dashboard-item button-icon icon ion-ios-people-outline" ng-click="goContacts()"></button>
+          <p>Contacts</p>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col text-center">
+          <button class="button dashboard-item button-icon icon ion-ios-chatboxes-outline"></button>
+          <p>Chat</p>
+        </div>
+        <div class="col text-center">
+          <button class="button dashboard-item button-icon icon ion-ios-calendar-outline" ng-click="goCalendar()"></button>
+          <p>Calendar</p>
+        </div>
+        <div class="col text-center">
+          <button class="button dashboard-item button-icon icon ion-ios-location-outline"></button>
+          <p>Places</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col text-center col-33 col-offset-67">
+          <button class="button dashboard-item-new button-icon icon ion-ios-plus-empty" ng-click="goOffer()"></button>
+        </div>
+      </div>
+    </div-->
+  </ion-content>
+</ion-view>

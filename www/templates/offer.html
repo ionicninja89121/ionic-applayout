@@ -1,0 +1,41 @@
+<ion-view view-title="">
+  <!--ion-header-bar class="bar-subheader sub-tab-header">
+    <div class="button-bar">
+      <button class="button" ng-class="{'tab-btn-active': tab_active[0]}" ng-click="onClickTab(0)">Current</button>
+      <button class="button" ng-class="{'tab-btn-active': tab_active[1]}" ng-click="onClickTab(1)">Accept</button>
+      <button class="button" ng-class="{'tab-btn-active': tab_active[2]}" ng-click="onClickTab(2)">Reject</button>
+    </div>
+  </ion-header-bar-->
+  <ion-content class="id-detail-content">
+    <div class="button-bar app-button-bar">
+      <button class="button" ng-class="{'tab-btn-active': tab_active[0]}" ng-click="onClickTab(0)">Current</button>
+      <button class="button" ng-class="{'tab-btn-active': tab_active[1]}" ng-click="onClickTab(1)">Accept</button>
+      <button class="button" ng-class="{'tab-btn-active': tab_active[2]}" ng-click="onClickTab(2)">Reject</button>
+    </div>
+
+    <ion-slide-box on-slide-changed="slideHasChanged($index)">
+      <ion-slide class="slide-box-container text-center" ng-repeat="slideItem in slideList">
+        <div class="slide-box">
+          <div class="list card">
+
+            <div class="item item-body">
+              <img class="full-image" src="img/logo.png">
+              <p>
+                This is a "Facebook" styled Card. The header is created from a Thumbnail List item,
+                the content is from a card-body consisting of an image and paragraph text. The footer
+                consists of tabs, icons aligned left, within the card-footer.
+              </p>
+            </div>
+            <div class="item item-icon-left item-icon-right">
+              <i class="icon ion-close"></i>
+              <span class="slide-item-cost">${{slideItem.cost}}</span>
+              <i class="icon ion-checkmark"></i>
+            </div>
+
+          </div>
+        </div>
+      </ion-slide>
+    </ion-slide-box>
+  </ion-content>
+</ion-view>
+
